@@ -1,5 +1,6 @@
-from flask import current_app
 import requests
+from flask import current_app
+
 
 def weather_by_city(city_name):
     wearther_url = current_app.config['WEATHER_URL']

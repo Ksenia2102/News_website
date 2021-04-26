@@ -1,7 +1,7 @@
 import requests
-
 from webapp.db import db
 from webapp.news.views import News
+
 
 def get_html(url):
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:65.0) Gecko/20100101 Firefox/65.0'}
@@ -11,6 +11,7 @@ def get_html(url):
         return result.text
     except(requests.RequestException, ValueError):
         return False
+
 
 def save_news(title, url, published):
     new_exists = News.query.filter(News.url == url).count()

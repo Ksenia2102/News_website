@@ -1,8 +1,8 @@
 from flask_wtf import FlaskForm
+from webapp.news.models import News
 from wtforms import HiddenField, StringField, SubmitField
 from wtforms.validators import DataRequired, ValidationError
 
-from webapp.news.models import News
 
 class CommentForm(FlaskForm):
     news_id = HiddenField('ID новости', validators=[DataRequired()])

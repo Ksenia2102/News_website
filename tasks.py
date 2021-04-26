@@ -1,7 +1,8 @@
 from celery import Celery
+from celery.schedules import crontab
+
 from webapp import create_app
 from webapp.news.parsers import habr
-from celery.schedules import crontab
 
 celery_app = Celery('tasks', broker='redis://localhost:6379/0')
 

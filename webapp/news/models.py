@@ -1,6 +1,8 @@
-from webapp.db import db
 from datetime import datetime
+
 from sqlalchemy.orm import relationship
+from webapp.db import db
+
 
 class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)

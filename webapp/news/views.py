@@ -4,8 +4,8 @@ from flask_login import current_user, login_required
 from webapp.db import db
 from webapp.news.forms import CommentForm
 from webapp.news.models import Comment, News
-from webapp.weather import weather_by_city
 from webapp.utils import get_redirect_target
+from webapp.weather import weather_by_city
 
 blueprint = Blueprint('news', __name__)
 
